@@ -284,6 +284,26 @@ export const useBookings = ({ event, hashedLink, bookingForm, metadata, teamMemb
     creatingInstantBooking: createInstantBookingMutation.isPending,
   };
 
+  if (createBookingMutation.isSuccess) {
+    // request permission to use notification and send schedule it
+    Notification.requestPermission().then(function (result) {
+      if (result === "granted") {
+        navigator.serviceWorker.ready.then(function (registration) {
+          registration.showNotification("Vaccine Schedule", {
+            body: "Your vaccine schedule has been successfully booked",
+            icon: "/path/to/icon.png",
+            vibrate: [200, 100, 200, 100, 200, 100, 200],
+            tag: "vaccine-schedule",
+            actions: [
+              { action: "explore", title: "Explore this new world", icon: "/path/to/explore.png" },
+              { action: "close", title: "Close notification", icon: "/path/to/close.png" },
+            ],
+          });
+        });
+      }
+    });
+  }
+
   return {
     handleBookEvent,
     expiryTime: instantMeetingTokenExpiryTime,
