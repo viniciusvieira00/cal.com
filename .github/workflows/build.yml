@@ -13,7 +13,12 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.PAT_TOKEN }}
       - name: Install dependencies
-        run: yarn install
+        runs-on: buildjet-4vcpu-ubuntu-2204
+        timeout-minutes: 10
+        steps:
+          - uses: actions/checkout@v4
+          - uses: ./.github/actions/dangerous-git-checkout
+          - uses: ./.github/actions/yarn-install
       - name: Test and coverage
         run: yarn test
       - name: Check coverage output
