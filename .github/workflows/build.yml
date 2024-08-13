@@ -1,28 +1,28 @@
-name: Yarn install
+name: Build and Test
 
 on:
   push:
     branches:
-      - main
-  pull_request:
-    types: [opened, synchronize, reopened]
+      - 'main'
 
 jobs:
-  setup:
-    name: Yarn install & cache
-    runs-on: buildjet-4vcpu-ubuntu-2204
-    timeout-minutes: 10
-    steps:
-      - uses: actions/checkout@v4
-      - uses: ./.github/actions/dangerous-git-checkout
-      - uses: ./.github/actions/yarn-install
+  ... # Run other jobs you want here
+
   sonarcloud:
+    name: SonarCloud
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+      - name: Install dependencies
+        run: yarn install
+      - name: Test and coverage
+        run: yarn test
+      - name: Check coverage output
+        run: cat coverage/lcov.info
       - name: SonarCloud Scan
-        uses: sonarsource/sonarcloud-github-action@v2.3.0
+        uses: SonarSource/sonarcloud-github-action@master
         env:
-          SONAR_TOKEN: 782b4623e4f832a5f34ba4550e73ee780d4acf11
+          GITHUB_TOKEN: ${{ github.token }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  
