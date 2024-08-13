@@ -1,13 +1,9 @@
 name: Build and Test
-
 on:
   push:
     branches:
       - 'main'
-
 jobs:
-  ... # Run other jobs you want here
-
   sonarcloud:
     name: SonarCloud
     runs-on: ubuntu-latest
