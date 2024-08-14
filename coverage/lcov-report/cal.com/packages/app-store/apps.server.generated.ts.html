@@ -1,0 +1,373 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for cal.com/packages/app-store/apps.server.generated.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">cal.com/packages/app-store</a> apps.server.generated.ts</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>0/92</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>1/1</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>1/1</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>0/92</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+    This file is autogenerated using the command `yarn app-store:build --watch`.
+    Don't modify this file manually.
+**/
+<span class="cstat-no" title="statement not covered" >export const apiHandlers = {</span>
+<span class="cstat-no" title="statement not covered" >  alby: import("./alby/api"),</span>
+<span class="cstat-no" title="statement not covered" >  amie: import("./amie/api"),</span>
+<span class="cstat-no" title="statement not covered" >  applecalendar: import("./applecalendar/api"),</span>
+<span class="cstat-no" title="statement not covered" >  around: import("./around/api"),</span>
+<span class="cstat-no" title="statement not covered" >  autocheckin: import("./autocheckin/api"),</span>
+<span class="cstat-no" title="statement not covered" >  "baa-for-hipaa": import("./baa-for-hipaa/api"),</span>
+<span class="cstat-no" title="statement not covered" >  basecamp3: import("./basecamp3/api"),</span>
+<span class="cstat-no" title="statement not covered" >  caldavcalendar: import("./caldavcalendar/api"),</span>
+<span class="cstat-no" title="statement not covered" >  campfire: import("./campfire/api"),</span>
+<span class="cstat-no" title="statement not covered" >  campsite: import("./campsite/api"),</span>
+<span class="cstat-no" title="statement not covered" >  clic: import("./clic/api"),</span>
+<span class="cstat-no" title="statement not covered" >  closecom: import("./closecom/api"),</span>
+<span class="cstat-no" title="statement not covered" >  cron: import("./cron/api"),</span>
+<span class="cstat-no" title="statement not covered" >  deel: import("./deel/api"),</span>
+<span class="cstat-no" title="statement not covered" >  demodesk: import("./demodesk/api"),</span>
+<span class="cstat-no" title="statement not covered" >  discord: import("./discord/api"),</span>
+<span class="cstat-no" title="statement not covered" >  eightxeight: import("./eightxeight/api"),</span>
+<span class="cstat-no" title="statement not covered" >  "element-call": import("./element-call/api"),</span>
+<span class="cstat-no" title="statement not covered" >  exchange2013calendar: import("./exchange2013calendar/api"),</span>
+<span class="cstat-no" title="statement not covered" >  exchange2016calendar: import("./exchange2016calendar/api"),</span>
+<span class="cstat-no" title="statement not covered" >  exchangecalendar: import("./exchangecalendar/api"),</span>
+<span class="cstat-no" title="statement not covered" >  facetime: import("./facetime/api"),</span>
+<span class="cstat-no" title="statement not covered" >  fathom: import("./fathom/api"),</span>
+<span class="cstat-no" title="statement not covered" >  feishucalendar: import("./feishucalendar/api"),</span>
+<span class="cstat-no" title="statement not covered" >  ga4: import("./ga4/api"),</span>
+<span class="cstat-no" title="statement not covered" >  giphy: import("./giphy/api"),</span>
+<span class="cstat-no" title="statement not covered" >  googlecalendar: import("./googlecalendar/api"),</span>
+<span class="cstat-no" title="statement not covered" >  googlevideo: import("./googlevideo/api"),</span>
+<span class="cstat-no" title="statement not covered" >  gtm: import("./gtm/api"),</span>
+<span class="cstat-no" title="statement not covered" >  "horizon-workrooms": import("./horizon-workrooms/api"),</span>
+<span class="cstat-no" title="statement not covered" >  hubspot: import("./hubspot/api"),</span>
+<span class="cstat-no" title="statement not covered" >  huddle01video: import("./huddle01video/api"),</span>
+<span class="cstat-no" title="statement not covered" >  "ics-feedcalendar": import("./ics-feedcalendar/api"),</span>
+<span class="cstat-no" title="statement not covered" >  intercom: import("./intercom/api"),</span>
+<span class="cstat-no" title="statement not covered" >  jelly: import("./jelly/api"),</span>
+<span class="cstat-no" title="statement not covered" >  jitsivideo: import("./jitsivideo/api"),</span>
+<span class="cstat-no" title="statement not covered" >  larkcalendar: import("./larkcalendar/api"),</span>
+<span class="cstat-no" title="statement not covered" >  linear: import("./linear/api"),</span>
+<span class="cstat-no" title="statement not covered" >  make: import("./make/api"),</span>
+<span class="cstat-no" title="statement not covered" >  matomo: import("./matomo/api"),</span>
+<span class="cstat-no" title="statement not covered" >  metapixel: import("./metapixel/api"),</span>
+<span class="cstat-no" title="statement not covered" >  mirotalk: import("./mirotalk/api"),</span>
+<span class="cstat-no" title="statement not covered" >  "mock-payment-app": import("./mock-payment-app/api"),</span>
+<span class="cstat-no" title="statement not covered" >  n8n: import("./n8n/api"),</span>
+<span class="cstat-no" title="statement not covered" >  office365calendar: import("./office365calendar/api"),</span>
+<span class="cstat-no" title="statement not covered" >  office365video: import("./office365video/api"),</span>
+<span class="cstat-no" title="statement not covered" >  paypal: import("./paypal/api"),</span>
+<span class="cstat-no" title="statement not covered" >  ping: import("./ping/api"),</span>
+<span class="cstat-no" title="statement not covered" >  pipedream: import("./pipedream/api"),</span>
+<span class="cstat-no" title="statement not covered" >  "pipedrive-crm": import("./pipedrive-crm/api"),</span>
+<span class="cstat-no" title="statement not covered" >  plausible: import("./plausible/api"),</span>
+<span class="cstat-no" title="statement not covered" >  posthog: import("./posthog/api"),</span>
+<span class="cstat-no" title="statement not covered" >  qr_code: import("./qr_code/api"),</span>
+<span class="cstat-no" title="statement not covered" >  raycast: import("./raycast/api"),</span>
+<span class="cstat-no" title="statement not covered" >  riverside: import("./riverside/api"),</span>
+<span class="cstat-no" title="statement not covered" >  roam: import("./roam/api"),</span>
+<span class="cstat-no" title="statement not covered" >  "routing-forms": import("./routing-forms/api"),</span>
+<span class="cstat-no" title="statement not covered" >  salesforce: import("./salesforce/api"),</span>
+<span class="cstat-no" title="statement not covered" >  salesroom: import("./salesroom/api"),</span>
+<span class="cstat-no" title="statement not covered" >  sendgrid: import("./sendgrid/api"),</span>
+<span class="cstat-no" title="statement not covered" >  shimmervideo: import("./shimmervideo/api"),</span>
+<span class="cstat-no" title="statement not covered" >  signal: import("./signal/api"),</span>
+<span class="cstat-no" title="statement not covered" >  sirius_video: import("./sirius_video/api"),</span>
+<span class="cstat-no" title="statement not covered" >  skype: import("./skype/api"),</span>
+<span class="cstat-no" title="statement not covered" >  stripepayment: import("./stripepayment/api"),</span>
+<span class="cstat-no" title="statement not covered" >  sylapsvideo: import("./sylapsvideo/api"),</span>
+<span class="cstat-no" title="statement not covered" >  tandemvideo: import("./tandemvideo/api"),</span>
+<span class="cstat-no" title="statement not covered" >  telegram: import("./telegram/api"),</span>
+<span class="cstat-no" title="statement not covered" >  basic: import("./templates/basic/api"),</span>
+<span class="cstat-no" title="statement not covered" >  "booking-pages-tag": import("./templates/booking-pages-tag/api"),</span>
+<span class="cstat-no" title="statement not covered" >  "event-type-app-card": import("./templates/event-type-app-card/api"),</span>
+<span class="cstat-no" title="statement not covered" >  "event-type-location-video-static": import("./templates/event-type-location-video-static/api"),</span>
+<span class="cstat-no" title="statement not covered" >  "general-app-settings": import("./templates/general-app-settings/api"),</span>
+<span class="cstat-no" title="statement not covered" >  "link-as-an-app": import("./templates/link-as-an-app/api"),</span>
+<span class="cstat-no" title="statement not covered" >  twipla: import("./twipla/api"),</span>
+<span class="cstat-no" title="statement not covered" >  typeform: import("./typeform/api"),</span>
+<span class="cstat-no" title="statement not covered" >  umami: import("./umami/api"),</span>
+<span class="cstat-no" title="statement not covered" >  vimcal: import("./vimcal/api"),</span>
+<span class="cstat-no" title="statement not covered" >  vital: import("./vital/api"),</span>
+<span class="cstat-no" title="statement not covered" >  weather_in_your_calendar: import("./weather_in_your_calendar/api"),</span>
+<span class="cstat-no" title="statement not covered" >  webex: import("./webex/api"),</span>
+<span class="cstat-no" title="statement not covered" >  whatsapp: import("./whatsapp/api"),</span>
+<span class="cstat-no" title="statement not covered" >  whereby: import("./whereby/api"),</span>
+<span class="cstat-no" title="statement not covered" >  wipemycalother: import("./wipemycalother/api"),</span>
+<span class="cstat-no" title="statement not covered" >  wordpress: import("./wordpress/api"),</span>
+<span class="cstat-no" title="statement not covered" >  zapier: import("./zapier/api"),</span>
+<span class="cstat-no" title="statement not covered" >  "zoho-bigin": import("./zoho-bigin/api"),</span>
+<span class="cstat-no" title="statement not covered" >  zohocalendar: import("./zohocalendar/api"),</span>
+<span class="cstat-no" title="statement not covered" >  zohocrm: import("./zohocrm/api"),</span>
+<span class="cstat-no" title="statement not covered" >  zoomvideo: import("./zoomvideo/api"),</span>
+<span class="cstat-no" title="statement not covered" >};</span>
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2024-08-14T00:59:34.453Z
+            </div>
+        <script src="../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../sorter.js"></script>
+        <script src="../../../block-navigation.js"></script>
+    </body>
+</html>
+    

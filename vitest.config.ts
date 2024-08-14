@@ -6,9 +6,11 @@ export default defineConfig({
   test: {
     coverage: {
       provider: "v8",
+      reporter: ['lcov']
     },
     passWithNoTests: true,
     testTimeout: 500000,
+    outputFile: "test-results.xml",
   },
 });
 

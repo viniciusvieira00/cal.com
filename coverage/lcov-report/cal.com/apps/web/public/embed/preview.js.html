@@ -1,0 +1,88 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for cal.com/apps/web/public/embed/preview.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../../../../index.html">All files</a> / <a href="index.html">cal.com/apps/web/public/embed</a> preview.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>0/1</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/1</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/1</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>0/1</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >(function(){const n=document.createElement("link").relList;if(n&amp;&amp;n.supports&amp;&amp;n.supports("modulepreload"))return;for(const t of document.querySelectorAll('link[rel="modulepreload"]'))i(t);new MutationObserver(t=&gt;{for(const e of t)if(e.type==="childList")for(const o of e.addedNodes)o.tagName==="LINK"&amp;&amp;o.rel==="modulepreload"&amp;&amp;i(o)}).observe(document,{childList:!0,subtree:!0});function s(t){const e={};return t.integrity&amp;&amp;(e.integrity=t.integrity),t.referrerPolicy&amp;&amp;(e.referrerPolicy=t.referrerPolicy),t.crossOrigin==="use-credentials"?e.credentials="include":t.crossOrigin==="anonymous"?e.credentials="omit":e.credentials="same-origin",e}function i(t){if(t.ep)return;t.ep=!0;const e=s(t);fetch(t.href,e)}})();const u=new URL(document.URL).searchParams,m=u.get("embedType"),l=u.get("calLink"),f=u.get("bookerUrl"),p=u.get("embedLibUrl");if(!f||!p)throw new Error(`Can't Preview: Missing "bookerUrl" or "embedLibUrl" query parameter`);(function(r,n,s){const i=function(e,o){e.q.push(o)},t=r.document;r.Cal=r.Cal||function(){const e=r.Cal,o=arguments;if(e.loaded||(e.ns={},e.q=e.q||[],t.head.appendChild(t.createElement("script")).src=n,e.loaded=!0),o[0]===s){const d=function(){i(d,arguments)},a=o[1];d.q=d.q||[],typeof a=="string"?(e.ns[a]=e.ns[a]||d,i(e.ns[a],o),i(e,["initNamespace",a])):i(e,o);return}i(e,o)}})(window,p,"init");const c=window;c.Cal.fingerprint="5ee374401";c.Cal("init",{origin:f});if(!l)throw new Error('Missing "calLink" query parameter');if(m==="inline")c.Cal("inline",{elementOrSelector:"#my-embed",calLink:l});else if(m==="floating-popup")c.Cal("floatingButton",{calLink:l,attributes:{id:"my-floating-button"}});else if(m==="element-click"){const r=document.createElement("button");r.setAttribute("data-cal-link",l),r.innerHTML="I am a button that exists on your website",document.body.appendChild(r)}c.addEventListener("message",r=&gt;{const n=r.data;if(n.mode!=="cal:preview")return;const s=window.Cal;if(!s)throw new Error("Cal is not defined yet");if(n.type=="instruction"&amp;&amp;s(n.instruction.name,n.instruction.arg),n.type=="inlineEmbedDimensionUpdate"){const i=document.querySelector("#my-embed");i&amp;&amp;(i.style.width=n.data.width,i.style.height=n.data.height)}});function h(){const r=window.matchMedia("(prefers-color-scheme: dark)");function n(s){s.matches?(document.body.classList.remove("light"),document.body.classList.add("dark")):(document.body.classList.add("light"),document.body.classList.remove("dark"))}r.addEventListener("change",n),n(new MediaQueryListEvent("change",{matches:r.matches}))}h();<span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" ></span></span></span>
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2024-08-14T00:59:34.453Z
+            </div>
+        <script src="../../../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../../../sorter.js"></script>
+        <script src="../../../../../block-navigation.js"></script>
+    </body>
+</html>
+    
