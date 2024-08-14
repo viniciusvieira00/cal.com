@@ -15,7 +15,7 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Test and coverage
-        run: yarn test
+        run: yarn test:coverage
       - name: Check coverage output
         run: cat coverage/lcov.info
       - name: SonarCloud Scan
